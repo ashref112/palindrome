@@ -1,0 +1,20 @@
+ALGORITHM is_palindrome(word)
+VAR
+   INPUT: word, a string
+    OUTPUT: True if the word is a palindrome, False otherwise
+BEGIN
+    left <- 0
+    right <- length(word) - 1
+
+    while left < right do
+        if word[left] != word[right] then
+            return False
+        end if
+        left <- left + 1
+        right <- right - 1
+
+    end while
+
+    return True
+END
+
